@@ -6,6 +6,7 @@
     <title>Ważenie samochodów ciężarowych
     </title>
     <link rel="stylesheet" href="styl.css">
+    <script src="skrypt.js"></script>
 </head>
 <body>
     <div id="header1">
@@ -18,7 +19,7 @@
     
     <section id = "lewy">
         <h2>Lokalizacje wag</h2>
-        <ol>
+        <ol id ="lista">
         <!--skrypt1-->
         </ol>
         <h2>Kontakt</h2>
@@ -26,16 +27,10 @@
     </section>
     <section id = "srodek">
         <h2>Alerty</h2>
-        <table>
-            <tr>
-                <th>rejestracja</th>
-                <th>ulica</th>
-                <th>waga</th>
-                <th>dzień</th>
-                <th>czas</th>
-            </tr>
-            <!--skrypt2-->
-        </table>
+        
+        <div id="tabela">
+        
+        </div>
     </section>
     <section id = "prawy">
         <img src="obraz2.jpg" alt="tir">
@@ -52,8 +47,8 @@
         <input type="number" name="waga" id="waga">
         <label for="rejestracja">Rejestracja</label>
         <input type="text" name="rejestracja" id="rejestracja">
-        <label for="data">Data</label>
-        <input type="date" name="data" id="data">
+        <label for="dzien">Data</label>
+        <input type="date" name="dzien" id="dzien">
         <label for="czas">Czas</label>
         <input type="time" name="czas" id="czas">
         <button type="button" id="dodaj_baza">DODAJ</button>

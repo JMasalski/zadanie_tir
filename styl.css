@@ -39,11 +39,12 @@ body{
 }
 #prawy{
     grid-area: prawy;
+    
 }
 
-#prawy >img{
+#prawy > img{
     width: 100%;
-    padding: 100px 0;
+    padding: 100px 0px 100px 0px;
 }
 
 
