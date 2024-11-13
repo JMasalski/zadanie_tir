@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ważenie samochodów ciężarowych
+    </title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="header1">
+        <h1>Ważenie pojazdów we Wrocławiu</h1>
+    </div>
+    <div id="header2">
+        <img src="obraz1.png" alt="waga" id="obraz1">
+    </div>
+    
+    
+    <section id = "lewy">
+        <h2>Lokalizacje wag</h2>
+        <ol>
+        <!--skrypt1-->
+        </ol>
+        <h2>Kontakt</h2>
+        <a href="mailto:wazenie@wroclaw.pl">napisz</a>
+    </section>
+    <section id = "srodek">
+        <h2>Alerty</h2>
+        <table>
+            <tr>
+                <th>rejestracja</th>
+                <th>ulica</th>
+                <th>waga</th>
+                <th>dzień</th>
+                <th>czas</th>
+            </tr>
+            <!--skrypt2-->
+        </table>
+    </section>
+    <section id = "prawy">
+        <img src="obraz2.jpg" alt="tir">
+    </section>
+    <section id="glowna">
+        <h2>Dodaj ważenie</h2>
+
+        <form action method="POST"></form>
+        <label for="lokalizacja">Lokalizacja</label>
+        <select name="lokalizacja" id="lokalizacja">
+            <!--skrypt3-->
+        </select>
+        <label for="waga">waga</label>
+        <input type="number" name="waga" id="waga">
+        <label for="rejestracja">Rejestracja</label>
+        <input type="text" name="rejestracja" id="rejestracja">
+        <label for="data">Data</label>
+        <input type="date" name="data" id="data">
+        <label for="czas">Czas</label>
+        <input type="time" name="czas" id="czas">
+        <button type="button" id="dodaj_baza">DODAJ</button>
+    </section>
+
+    <footer>
+        <p>Stronę wykonał: Jakub Masalski 25083</p>
+    </footer>
+</body>
+</html>
