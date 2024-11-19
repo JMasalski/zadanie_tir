@@ -4,7 +4,7 @@ baseURL = 'http://localhost/zadanie_tir/';
 window.onload = () =>{
     lokalizacje()
     tabela()
-    opcje()
+    // opcje()
     document.querySelector('#dodaj_baza').addEventListener("click", dodaj_baza);
 }
 
@@ -14,31 +14,20 @@ function lokalizacje(){
     xhr.open("GET", url);
 
     xhr.onload = () => {
-        if(xhr.status != 200){
+        if (xhr.status != 200) {
             console.log(`Błąd połączenia ${xhr.status}`);
-            }
-        else{
-            document.querySelector("#lista").innerHTML = xhr.response;
+        } else {
+            // Podziel odpowiedź na część dla listy i dla selecta
+            const [listaHTML, selectHTML] = xhr.response.split("||");
+            
+            // Wstaw HTML do listy i selecta
+            document.querySelector("#lista").innerHTML = listaHTML;
+            document.querySelector("#lokalizacja").innerHTML = selectHTML;
         }
-    }
+    };
     xhr.send();
 }
 
-function opcje(){
-    let url = "opcje.php";
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-
-    xhr.onload = () => {
-        if(xhr.status != 200){
-            console.log(`Błąd połączenia ${xhr.status}`);
-            }
-        else{
-            document.querySelector("#lokalizacja").innerHTML = xhr.response;
-        }
-    }
-    xhr.send();
-}
 
 
 function tabela(){
